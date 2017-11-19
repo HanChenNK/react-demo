@@ -6,7 +6,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'index.js',
+    filename: 'index.js'
   },
   devtool: 'eval-source-map',
   devServer: {
@@ -21,8 +21,8 @@ module.exports = {
         test: /\.css$/,
         use: [
           'style-loader',
-          'css-loader',
-        ],
+          'css-loader'
+        ]
       },
       {
         test: /\.js$/,
@@ -30,11 +30,11 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['react', 'es2015', 'stage-0'],
-          },
-        },
-      },
-    ],
+            presets: ['react', 'es2015', 'stage-0']
+          }
+        }
+      }
+    ]
   },
   plugins: [
     new webpack.BannerPlugin('hanchen'),
@@ -42,6 +42,6 @@ module.exports = {
       template: path.resolve(__dirname, 'src/index.tmpl.html'),
       filename: 'index.html',
       inject: 'body'
-    }),
-  ],
+    })
+  ]
 };
