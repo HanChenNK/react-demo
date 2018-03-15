@@ -14,5 +14,5 @@ npm install
 npm run build
 ```
 ```
-npm run starts
+npm run start
 ```
